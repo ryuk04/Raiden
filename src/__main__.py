@@ -83,7 +83,7 @@ from src.source import ALL_source
 from src.source.helper_funcs.chat_status import is_TheRiZoeL as is_user_admin
 from src.source.helper_funcs.misc import paginate_source
 
-MIKU_S = "https://graph.org/file/3de54ad1098888d494b93.jpg"
+MIKU_S = "https://graph.org/file/1e00f9ce8266bcf28a18b.jpg"
 
 def get_readable_time(seconds: int) -> str:
     count = 0
@@ -115,38 +115,31 @@ HELP_MSG = "Click The Button Below To Get Help Menu In Your Dm."
 START_MSG = "I'm Awake Already!\n<b>Haven't Slept Since:</b> <code>{}</code>"
 
 PM_START_TEXT = """
-────「 [Cʜɪᴢᴜʀᴜ]({}) 」────
-*Hᴀʏɪ Hᴀʏɪ*! {} sᴇɴᴘᴀɪ,
-Mʏsᴇʟғ *Cʜɪᴢᴜʀᴜ* ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴜɪʟᴛ ᴛᴏ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘs.
-sᴏ ᴡʜᴀᴛ ᴀʀᴇ ʏᴏᴜ ᴡᴀɪᴛɪɴɢ ғᴏʀ sᴇɴᴘᴀɪ ʀᴇʟᴀx ᴀɴᴅ ᴊᴜsᴛ ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ʟᴇᴍᴍᴇ ʜᴀɴᴅʟᴇ ᴀʟʟ ᴛʜᴇ ᴛᴀsᴋs.
-━─━────༺༻────━─━
-⦿ ᴜᴘᴛɪᴍᴇ {}
-━─━────༺༻────━─━
-ʜɪᴛ /help ᴛᴏ ᴋɴᴏᴡ ᴍʏ ᴀʙɪʟɪᴛɪᴇs.
+*[❂]({})Hayi Hayi*! {} Senpai,
+Myself *Raiden* An Advance Management Bot Built to Manage Your Groups.
+───────────────────────
+⦿ Alive Since {}
+───────────────────────
+**Hit /help to find out more about how to use me to my full potential.**.
 """
 
 
 PHOTO = (
-      "https://graph.org/file/d83b580634ac1590471f4.jpg",
-      "https://graph.org/file/cd0694447554e66eb5ad5.jpg",
-      "https://graph.org/file/be42c59456bad76fec619.jpg",
-      "https://graph.org/file/b133b77a192510d463cac.jpg",
-      "https://graph.org/file/e59a61290dd7097a3c5f1.jpg",
-      "https://graph.org/file/092872aa619a467d57ea5.jpg",
-      "https://graph.org/file/281ee6f0787440b251c8a.jpg",
+      "https://graph.org/file/79666d9264f849fb06a50.jpg",
+      "https://graph.org/file/0cee276f2baecdf7df0b9.jpg",
 )
 
 buttons = [
     [
         InlineKeyboardButton(
-            text=f"🔥ᴀᴅᴅ ᴍᴇ ɪɴ ɢʀᴏᴜᴘs🔥",
+            text=f"✧Add Me To your Chat✧",
             url=f"https://telegram.dog/{BOT_USERNAME}?startgroup=true",
         )
     ],
     [
-        InlineKeyboardButton(text="⚡ᴄᴏᴍᴍᴀɴᴅs⚡", callback_data="help_back"),
+        InlineKeyboardButton(text="⚙️Commands⚙️", callback_data="help_back"),
         InlineKeyboardButton(
-            text="🚁sᴜᴘᴘᴏʀᴛ🚁", url="https://t.me/WoFBotsSupport"
+            text="🚑sᴜᴘᴘᴏʀᴛ🚑", url="https://t.me/WoFBotsSupport"
         ),
     ],
 ]
