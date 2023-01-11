@@ -203,7 +203,7 @@ def kang(update, context):
             sticker_emoji = "🙂"
 
         adding_process = msg.reply_text(
-            "<b>Please wait...For a Moment</b>",
+            "<b>Please wait...For a Moment\nNote if you are kanging for first time please type /kang to get your sticker pack</b>",
             parse_mode=ParseMode.HTML,
         )
 
