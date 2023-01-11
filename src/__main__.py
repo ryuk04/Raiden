@@ -185,16 +185,16 @@ GDPR = []
 for module_name in ALL_source:
     imported_module = importlib.import_module(f"src.source.{module_name}")
 
-    if not hasattr(imported_module, "__mod_name__"):
-        imported_module.__mod_name__ = imported_module.__name__
+    if not hasattr(imported_module, "inline"):
+        imported_module.inline = imported_module.__name__
 
-    if imported_module.__mod_name__.lower() not in IMPORTED:
-        IMPORTED[imported_module.__mod_name__.lower()] = imported_module
+    if imported_module.inline.lower() not in IMPORTED:
+        IMPORTED[imported_module.inline.lower()] = imported_module
     else:
         raise Exception("Can't have two source with the same name! Please change one")
 
     if hasattr(imported_module, "__help__") and imported_module.__help__:
-        HELPABLE[imported_module.__mod_name__.lower()] = imported_module
+        HELPABLE[imported_module.inline.lower()] = imported_module
 
     # Chats to migrate on chat_migrated events
     if hasattr(imported_module, "__migrate__"):
@@ -216,10 +216,10 @@ for module_name in ALL_source:
         DATA_EXPORT.append(imported_module)
 
     if hasattr(imported_module, "__chat_settings__"):
-        CHAT_SETTINGS[imported_module.__mod_name__.lower()] = imported_module
+        CHAT_SETTINGS[imported_module.inline.lower()] = imported_module
 
     if hasattr(imported_module, "__user_settings__"):
-        USER_SETTINGS[imported_module.__mod_name__.lower()] = imported_module
+        USER_SETTINGS[imported_module.inline.lower()] = imported_module
 
 
 # do not async
@@ -359,7 +359,7 @@ def help_button(update: Update, context: CallbackContext) -> None:
         if mod_match:
             module = mod_match[1]
             text = (
-                f"╔═━「 *{HELPABLE[module].__mod_name__}* module: 」\n"
+                f"╔═━「 *{HELPABLE[module].inline}* module: 」\n"
                 + HELPABLE[module].__help__
             )
 
@@ -463,7 +463,7 @@ def get_help(update: Update, context: CallbackContext) -> None:
 
     if len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
-        text = f" 〔 *{HELPABLE[module].__mod_name__}* 〕\n{HELPABLE[module].__help__}"
+        text = f" 〔 *{HELPABLE[module].inline}* 〕\n{HELPABLE[module].__help__}"
 
         send_help(
             chat.id,
@@ -481,7 +481,7 @@ def send_settings(context: CallbackContext, chat_id, user_id, user=False):
     if user:
         if USER_SETTINGS:
             settings = "\n\n".join(
-                f"*{mod.__mod_name__}*:\n{mod.__user_settings__(user_id)}"
+                f"*{mod.inline}*:\n{mod.__user_settings__(user_id)}"
                 for mod in USER_SETTINGS.values()
             )
 
@@ -529,7 +529,7 @@ def settings_button(update: Update, context: CallbackContext) -> None:
             chat_id = mod_match[1]
             module = mod_match[2]
             chat = bot.get_chat(chat_id)
-            text = f"*{escape_markdown(chat.title)}* has the following settings for the *{CHAT_SETTINGS[module].__mod_name__}* module:\n\n" + CHAT_SETTINGS[
+            text = f"*{escape_markdown(chat.title)}* has the following settings for the *{CHAT_SETTINGS[module].inline}* module:\n\n" + CHAT_SETTINGS[
                 module
             ].__chat_settings__(
                 chat_id, user.id
