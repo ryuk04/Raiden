@@ -66,7 +66,7 @@ from src import (
     DONATION_LINK,
     LOGGER,
     dispatcher,
-    OWNER_ID,
+    Owner as OWNER_ID,
     PORT,
     SUPPORT_CHAT,
     TOKEN,
