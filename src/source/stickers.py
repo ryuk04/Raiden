@@ -432,12 +432,6 @@ def kang(update, context):
                                 text="View Pack", url=f"t.me/addstickers/{packname}"
                             )
                         ]
-                    [
-                 InlineKeyboardButton(
-                  text="Video Pack", url=f"https://t.me/addstickers/video{user.id}_by_{context.bot.username}"),
-                 InlineKeyboardButton(
-                  text="Animated Pack", url=f"https://t.me/addstickers/animated{user.id}_by_{context.bot.username}"),
-             ],
                     ]
                 )
                 adding_process.edit_text(
@@ -598,6 +592,12 @@ def kang(update, context):
              [
               InlineKeyboardButton(
                text="Sticker Pack", url=f"{packs}"),
+             ],
+            [
+                 InlineKeyboardButton(
+                  text="•Video Pack•", url=f"https://t.me/addstickers/video{user.id}_by_{context.bot.username}"),
+                 InlineKeyboardButton(
+                  text="•Animated Pack•", url=f"https://t.me/addstickers/animated{user.id}_by_{context.bot.username}"),
              ],
             ]
         )
