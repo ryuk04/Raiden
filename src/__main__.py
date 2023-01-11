@@ -81,14 +81,18 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 HELP_STRINGS = """
-Click on the button bellow to get description about specifics command."""
+Click on the button bellow to get description about specific commands."""
 
-PM_START_PIC = "https://telegra.ph/file/90bd376bb7a6d1539137d.mp4"
+PM_START_PIC = (
+      "https://graph.org/file/0cee276f2baecdf7df0b9.jpg",
+      "https://graph.org/file/79666d9264f849fb06a50.jpg",
+)
 
 PM_START_TEXT ="""
-Heya {} , My name is Miku - I'm here to help you manage your groups! Hit /help to find out more about how to use me to my full potential.
+Heya {} , Myself Raiden Shogen- I'm here to help you manage your groups with advance and lots of features!
 
-Join my [News Channel](https://t.me/MikuBotUpdates) to get information on all the latest updates. """
+Hit /help to find out more about how to use me to my full potential.
+"""
 
 IMPORTED = {}
 MIGRATEABLE = []
