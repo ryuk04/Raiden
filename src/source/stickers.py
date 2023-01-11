@@ -595,9 +595,9 @@ def kang(update, context):
              ],
             [
                  InlineKeyboardButton(
-                  text="•Video Pack•", url=f"https://t.me/addstickers/video{user.id}_by_{context.bot.username}"),
+                  text="Video Pack", url=f"https://t.me/addstickers/video{user.id}_by_{context.bot.username}"),
                  InlineKeyboardButton(
-                  text="•Animated Pack•", url=f"https://t.me/addstickers/animated{user.id}_by_{context.bot.username}"),
+                  text="Animated Pack", url=f"https://t.me/addstickers/animated{user.id}_by_{context.bot.username}"),
              ],
             ]
         )
