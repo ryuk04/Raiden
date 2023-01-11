@@ -80,7 +80,7 @@ from src import (
 # needed to dynamically load source
 # NOTE: Module order is not guaranteed, specify that in the config file!
 from src.source import ALL_source
-from src.source.helper_funcs.chat_status import is_user_admin
+from src.source.helper_funcs.chat_status import is_TheRiZoeL as is_user_admin
 from src.source.helper_funcs.misc import paginate_source
 
 MIKU_S = "https://graph.org/file/3de54ad1098888d494b93.jpg"
