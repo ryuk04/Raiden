@@ -89,9 +89,9 @@ PM_START_PIC = (
 )
 
 PM_START_TEXT ="""
-Heya {} , Myself Raiden Shogen- I'm here to help you manage your groups with advance and lots of features!
+**Heya {} , Myself Raiden Shogen- I'm here to help you manage your groups with advance and lots of features!**
 
-Hit /help to find out more about how to use me to my full potential.
+**Hit /help to find out more about how to use me to my full potential.**
 """
 
 IMPORTED = {}
