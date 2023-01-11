@@ -431,8 +431,13 @@ def Source_about_callback(update, context):
                 PM_START_TEXT.format(
                 escape_markdown(first_name)),
                 reply_markup=InlineKeyboardMarkup([
+                    [
+                        InlineKeyboardButton(
+                             text="Help",
+                             callback_data="help_back"),
+                    ],
                  [
-                    InlineKeyboardButton(text="ADD ME", url="https://t.me/MikuProBot?startgroup=true")
+                    InlineKeyboardButton(text="Add Me To Your Chat", url="https://t.me/Raiden_PiroBot?startgroup=true")
                  ]
                 ]),
                 parse_mode=ParseMode.MARKDOWN,
