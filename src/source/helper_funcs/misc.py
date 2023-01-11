@@ -74,9 +74,9 @@ def paginate_source(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
         modules = sorted(
             [
                 EqInlineKeyboardButton(
-                    x.__mod_name__,
+                    x.inline,
                     callback_data="{}_module({})".format(
-                        prefix, x.__mod_name__.lower()
+                        prefix, x.inline.lower()
                     ),
                 )
                 for x in module_dict.values()
@@ -86,9 +86,9 @@ def paginate_source(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
         modules = sorted(
             [
                 EqInlineKeyboardButton(
-                    x.__mod_name__,
+                    x.inline,
                     callback_data="{}_module({},{})".format(
-                        prefix, chat, x.__mod_name__.lower()
+                        prefix, chat, x.inline.lower()
                     ),
                 )
                 for x in module_dict.values()
