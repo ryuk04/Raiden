@@ -4,7 +4,7 @@ from src import pbot as app
 from src.utils.pluginhelper import fetch
 from src.utils.inlinefuncs import *
 
-__MODULE__ = "Inline"
+inline = "Inline"
 saxsux = """See inline for help related to inline"""
 
 
