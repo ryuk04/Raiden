@@ -193,7 +193,7 @@ for module_name in ALL_source:
     else:
         raise Exception("Can't have two source with the same name! Please change one")
 
-    if hasattr(imported_module, "__help__") and imported_module.__help__:
+    if hasattr(imported_module, "saxsux") and imported_module.saxsux:
         HELPABLE[imported_module.inline.lower()] = imported_module
 
     # Chats to migrate on chat_migrated events
@@ -255,7 +255,7 @@ def start(update: Update, context: CallbackContext):
                     return
                 send_help(
                     update.effective_chat.id,
-                    HELPABLE[mod].__help__,
+                    HELPABLE[mod].saxsux,
                     InlineKeyboardMarkup(
                         [
                             [
@@ -360,7 +360,7 @@ def help_button(update: Update, context: CallbackContext) -> None:
             module = mod_match[1]
             text = (
                 f"╔═━「 *{HELPABLE[module].inline}* module: 」\n"
-                + HELPABLE[module].__help__
+                + HELPABLE[module].saxsux
             )
 
             query.message.edit_text(
@@ -463,7 +463,7 @@ def get_help(update: Update, context: CallbackContext) -> None:
 
     if len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
-        text = f" 〔 *{HELPABLE[module].inline}* 〕\n{HELPABLE[module].__help__}"
+        text = f" 〔 *{HELPABLE[module].inline}* 〕\n{HELPABLE[module].saxsux}"
 
         send_help(
             chat.id,
