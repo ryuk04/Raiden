@@ -221,7 +221,7 @@ def send_help(chat_id, text, keyboard=None):
         keyboard = InlineKeyboardMarkup(paginate_source(0, HELPABLE, "help"))
     dispatcher.bot.send_message(
         chat_id=chat_id,
-        text=text,
+        text,
         parse_mode=ParseMode.MARKDOWN,
         disable_web_page_preview=True,
         reply_markup=keyboard,
@@ -536,7 +536,7 @@ def settings_button(update: Update, context: CallbackContext) -> None:
             )
             keyboard.append(kbrd)
             query.message.edit_caption(
-                text=text, parse_mode=ParseMode.MARKDOWN, reply_markup=keyboard
+                text, parse_mode=ParseMode.MARKDOWN, reply_markup=keyboard
             )
         elif prev_match:
             chat_id = prev_match[1]
