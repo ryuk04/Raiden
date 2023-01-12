@@ -617,7 +617,7 @@ def donate(update: Update, context: CallbackContext) -> None:
 
         if OWNER_ID != 5667156680 and DONATION_LINK:
             update.effective_message.reply_text(
-                f"Adding Me To Your Groups Is Donation For Me Though I Would Appreciate If You Join My Creator's Group @WingsOfFreedom2",
+                f"Adding Me To Your Groups Is Donation For Me Though I Would Appreciate If You Join My Creator's Group @EXTINCTION_XD",
                 parse_mode=ParseMode.MARKDOWN,
             )
 
