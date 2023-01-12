@@ -115,7 +115,7 @@ HELP_MSG = "Click The Button Below To Get Help Menu In Your Dm."
 START_MSG = "I'm Awake Already!\n<b>Haven't Slept Since:</b> <code>{}</code>"
 
 PM_START_TEXT = """
-*[❂]({})Hayi Hayi*! {} Senpai,
+❂ *Hayi Hayi*! {} Senpai,
 Myself *Raiden* An Advance Management Bot Built to Manage Your Groups.
 ───────────────────────
 ⦿ Alive Since {}
@@ -274,8 +274,9 @@ def start(update: Update, context: CallbackContext):
 
         else:
             first_name = update.effective_user.first_name
-            update.effective_message.reply_text(
-                PM_START_TEXT.format(random.choice(PHOTO),escape_markdown(first_name),
+            update.effective_message.reply_photo(
+                photo=(PHOTO),
+                caption=PM_START_TEXT.format(escape_markdown(first_name),
                     escape_markdown(uptime),
                 ),
                 reply_markup=InlineKeyboardMarkup(buttons),
@@ -419,9 +420,8 @@ def neko_callback_data(update: Update, context: CallbackContext) -> None:
         )
     elif query.data == "neko_back":
         first_name = update.effective_user.first_name
-        query.message.edit_text(
-            PM_START_TEXT.format(random.choice(PHOTO),
-                escape_markdown(first_name),
+        query.message.edit_caption(
+            PM_START_TEXT.format(escape_markdown(first_name),
             ),
             reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode=ParseMode.MARKDOWN,
