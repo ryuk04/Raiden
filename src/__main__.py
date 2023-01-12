@@ -175,8 +175,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_source:
-    imported_module = importlib.import_module(f"src.source.{module_name}")
-
+    imported_module = importlib.import_module("src.source." + module_name)
     if not hasattr(imported_module, "inline"):
         imported_module.inline = imported_module.__name__
 
