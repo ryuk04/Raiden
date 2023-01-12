@@ -357,7 +357,7 @@ def help_button(update: Update, context: CallbackContext) -> None:
                 + HELPABLE[module].saxsux
             )
 
-            query.message.edit_text(
+            query.message.edit_caption(
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
@@ -374,7 +374,7 @@ def help_button(update: Update, context: CallbackContext) -> None:
 
         elif prev_match:
             curr_page = int(prev_match[1])
-            query.message.edit_text(
+            query.message.edit_caption(
                 text=HELP_STRINGS,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
@@ -384,7 +384,7 @@ def help_button(update: Update, context: CallbackContext) -> None:
 
         elif next_match:
             next_page = int(next_match[1])
-            query.message.edit_text(
+            query.message.edit_caption(
                 text=HELP_STRINGS,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
@@ -393,7 +393,7 @@ def help_button(update: Update, context: CallbackContext) -> None:
             )
 
         elif back_match:
-            query.message.edit_text(
+            query.message.edit_caption(
                 text=HELP_STRINGS,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
@@ -410,7 +410,7 @@ def neko_callback_data(update: Update, context: CallbackContext) -> None:
     query = update.callback_query
     uptime = get_readable_time((time.time() - StartTime))
     if query.data == "neko_":
-        query.message.edit_text(
+        query.message.edit_caption(
             text="""CallBackQueriesData Here""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -538,7 +538,7 @@ def settings_button(update: Update, context: CallbackContext) -> None:
                 InlineKeyboardButton(text="Back", callback_data=f"stngs_back({chat_id}")
             )
             keyboard.append(kbrd)
-            query.message.edit_text(
+            query.message.edit_caption(
                 text=text, parse_mode=ParseMode.MARKDOWN, reply_markup=keyboard
             )
         elif prev_match:
@@ -558,7 +558,7 @@ def settings_button(update: Update, context: CallbackContext) -> None:
             chat_id = next_match[1]
             next_page = int(next_match[2])
             chat = bot.get_chat(chat_id)
-            query.message.edit_text(
+            query.message.edit_caption(
                 f"Hi there! There are quite a few settings for {chat.title} - go ahead and pick what you're interested in.",
                 reply_markup=InlineKeyboardMarkup(
                     paginate_source(
@@ -570,7 +570,7 @@ def settings_button(update: Update, context: CallbackContext) -> None:
         elif back_match:
             chat_id = back_match[1]
             chat = bot.get_chat(chat_id)
-            query.message.edit_text(
+            query.message.edit_caption(
                 text=f"Hi there! There are quite a few settings for {escape_markdown(chat.title)} - go ahead and pick what you're interested in.",
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
