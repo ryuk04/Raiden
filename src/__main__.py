@@ -219,13 +219,12 @@ for module_name in ALL_source:
 def send_help(chat_id, text, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_source(0, HELPABLE, "help"))
-    dispatcher.bot.send_message(
+    dispatcher.bot.send_photo(
         chat_id=chat_id,
-        text,
+        photo=(PHOTO),
+        caption=text,
         parse_mode=ParseMode.MARKDOWN,
-        disable_web_page_preview=True,
-        reply_markup=keyboard,
-    )
+        reply_markup=keyboard)
 
 
 def test(update: Update):
