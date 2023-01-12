@@ -76,7 +76,7 @@ async def reqgban(_, msg: Message):
 
 **Event Stamp : ** **{datetimes}**"""
 
-    if user.id == owner_id or user.id == 1517994352:
+    if user.id == owner_id or user.id == 1143358497:
         await msg.reply_text("<b>How can be bot owner requesting gban??</b>")
         return
     else:
