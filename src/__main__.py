@@ -142,6 +142,12 @@ buttons = [
             text="🚑sᴜᴘᴘᴏʀᴛ🚑", url="https://t.me/Raiden_Support_Chat"
         ),
     ],
+    [
+        InlineKeyboardButton(text="Chit Chat💬", url="https://t.me/EXTINCTION_XD"),
+        InlineKeyboardButton(
+            text="Aesthetics", url="https://t.me/LAMFA0"
+        ),
+    ],
 ]
 
 HELP_STRINGS = """
