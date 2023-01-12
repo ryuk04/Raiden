@@ -216,10 +216,11 @@ def send_help(chat_id, text, keyboard=None):
         keyboard = InlineKeyboardMarkup(paginate_source(0, HELPABLE, "help"))
     dispatcher.bot.send_message(
         chat_id=chat_id,
-        photo=(PHOTO),
-        caption=text,
+        text=text,
         parse_mode=ParseMode.MARKDOWN,
-        reply_markup=keyboard)
+        disable_web_page_preview=True,
+        reply_markup=keyboard,
+    )
 
 
 def test(update: Update):
