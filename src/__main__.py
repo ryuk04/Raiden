@@ -358,7 +358,7 @@ def help_button(update: Update, context: CallbackContext) -> None:
             )
 
             query.message.edit_caption(
-                text=text,
+                text,
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
