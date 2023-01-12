@@ -155,11 +155,9 @@ HELP_STRINGS = """
 """
 
 GROUP_START_IMG = (
-    "https://graph.org/file/8da1926f37ba046380333.jpg",
-    "https://graph.org/file/c524b116572aeab85de10.jpg",
-    "https://graph.org/file/0207ffe5c34d8def45246.jpg",
-    "https://graph.org/file/575bb37708e2c571cb142.jpg",
-    "https://graph.org/file/dbbeff71ace10c605b517.jpg",
+    "https://telegra.ph/file/b6477c628a73c9b4a9b4a.jpg",
+    "https://telegra.ph/file/4098064a39021430b0c30.jpg",
+    "https://telegra.ph/file/8164917f024a4bae80c6d.jpg",
 )
 
 DONATE_STRING = """❂ I'm Free for Everyone ❂"""
