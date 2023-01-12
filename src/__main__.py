@@ -394,12 +394,10 @@ def help_button(update: Update, context: CallbackContext) -> None:
 
         elif back_match:
             query.message.edit_caption(
-                text=HELP_STRINGS,
+                HELP_STRINGS.format(update.effective_user.first_name, update.effective_user.id),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    paginate_source(0, HELPABLE, "help")
-                ),
-            )
+                    paginate_source(0, HELPABLE, "help")))
 
         # ensure no spinny white circle
         context.bot.answer_callback_query(query.id)
